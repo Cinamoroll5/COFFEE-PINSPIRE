@@ -1,24 +1,19 @@
 import json
 
-
-file=open("me.json","r")
-file.seek(0)
-allcoffees=json.loads(file.read())
-file.close()
-print (type(allcoffees))
-print(allcoffees)
-
-
 newcofffee={
             "name": 'chocochips',
             "description": 'tasty',
             "ingridients":"chocolate",
             "imagename":"choco eatt eat"
         }
-allcoffees.append(newcofffee)
+#read the file
+
+file=open("me.json","r")
+allcoffee=json.load(file)
+print(allcoffee)
+file.close()
+allcoffee.append(newcofffee)
+#save all the coffffeeeeeeeeeeeeessssssssssszzzzzzzzz!!!!!!!!!!!!!!!!!!bobotea
 file=open("me.json","w")
-file.write(str(allcoffees))
-file.flush()
-
-
+json.dump(allcoffee,fp=file,indent=4)
 file.close()

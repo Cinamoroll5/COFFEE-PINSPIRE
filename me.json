@@ -1,1 +1,14 @@
-['kenyan', {'name': 'chocochips', 'description': 'tasty', 'ingridients': 'chocolate', 'imagename': 'choco eatt eat'}]
+[
+    {
+        "name": "CARAMEL MILKSHAKE",
+        "description": "choco berrie",
+        "ingridients": "COOKIES AND MILK AND COFFEE",
+        "imagename": "caramel-milkshake-with-whipped-cream-toffee.jpg"
+    },
+    {
+        "name": "cinamonroll",
+        "description": "soft and chewy",
+        "ingridients": " yeast sugar flour milk eggs butter",
+        "imagename": "delicious-roll-food-bun-rolls.jpg"
+    }
+]

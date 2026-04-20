@@ -1,13 +1,18 @@
 import flask
+import json
 
-allcoffeessss=[]
+
+file=open("me.json","r")
+allcoffee=json.load(file)
+print(allcoffee)
+file.close()
 
 app=flask.Flask("COFFEE APP")
 
 @app.route("/" ,methods=["get","post"])
 
 def HOME():
-    return flask.render_template("HOME🧋.HTML",allcoffeessss=allcoffeessss)
+    return flask.render_template("HOME🧋.HTML",allcoffeessss=allcoffee)
 
 
 #add coffee
@@ -38,10 +43,13 @@ def ADD():
             "ingridients":ingridients,
             "imagename":image.filename
         }
-        allcoffeessss.append(newcofffee)
+        allcoffee.append(newcofffee)
+        #save all the coffffeeeeeeeeeeeeessssssssssszzzzzzzzz!!!!!!!!!!!!!!!!!!bobotea
+        file=open("me.json","w")
+        json.dump(allcoffee,fp=file,indent=4)
+        file.close()
 
-
-        #to do:save
+      
 
 
 
